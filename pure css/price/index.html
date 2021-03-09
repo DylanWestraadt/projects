@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vanilla info card</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <div class="card">
+            <div class="icon">
+                <div class="circle" id="circle"><h1>i</h1><br></div>
+          
+                <div class="wrapper disabled" id="wrapper">
+                    <div class="content">
+                            <h2>Full Color</h2>
+                            <span>R1500</span>
+                            <p>Full head of color,<br> with all the bits and pieces</p>
+                            <p class="footer">...and free blow-dry</p>
+                    </div>
+            </div>
+            
+        </div>
+        
+     
+        <script type="text/javascript">
+        const i = document.getElementById("circle");
+        let w = document.getElementById("wrapper");
+         i.addEventListener('click',function(){
+             if(w.classList.contains('disabled')){
+                w.classList.replace('wrapper','wrapper-full');
+                w.classList.replace('disabled', 'enabled');
+             }
+             else{
+                w.classList.replace('wrapper-full','wrapper');
+                w.classList.replace('enabled', 'disabled');
+             }
+         });
+        </script>
+    </body>
+</html>
